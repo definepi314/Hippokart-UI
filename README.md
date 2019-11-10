@@ -1,6 +1,10 @@
-# ShoppingCartApp
+# HippokartApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+
+## Dependencies installation
+
+Run `npm install` to install dependencies.
 
 ## Development server
 
