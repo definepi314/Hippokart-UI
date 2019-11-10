@@ -1,0 +1,23 @@
+[
+    {
+        "productId": 1,
+        "productName": "Mi Note 7 Pro (64GB)",
+        "productPrice": 18000,
+        "categoryId": 1,
+        "image": "./assets/images/mi.jpg"
+    },
+    {
+        "productId": 2,
+        "productName": "Google Pixel 2XL (128GB)",
+        "productPrice": 70000,
+        "categoryId": 1,
+        "image": "./assets/images/pixel.jpg"
+    },
+    {
+        "productId": 3,
+        "productName": "Oppo F5 Youth (32GB)",
+        "productPrice": 15000,
+        "categoryId": 1,
+        "image": "./assets/images/oppo.jpg"
+    }
+]

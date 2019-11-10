@@ -1,0 +1,52 @@
+<div class="wrapper">
+    <!-- <img src="assets/images/BlueBackground.jpg" class="backimg"> -->
+    <div class="container col-md-6 col-lg-6 ml auto mr auto">
+        <mat-card style="padding: 0;">
+            <div class="row">
+                <div class="col-md-6 image">
+                    <img src="assets/images/cart-logo.png" class="logo">
+                </div>
+                <div class="col-md-6">
+                    <form [formGroup]="signUpForm" class="formSty">
+                        <div class="example-container">
+                            <mat-form-field>
+                                <input matInput type="text" placeholder="Firstname" formControlName="firstName">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input matInput type="text" placeholder="Lastname" formControlName="lastName">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input matInput type="text" placeholder="Email ID" formControlName="email">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input matInput type="text" placeholder="Phone Number" formControlName="number">
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input matInput type="password" placeholder="Password" formControlName="password">
+                            </mat-form-field>
+                            <div class="row" style="width: 100%;">
+                                <div class="col-md-6" style="text-align: center">
+                                    <button mat-button class="loginBtn" [disabled]="!signUpForm.valid" (click)="onClickSubmit(signUpForm.value)">Sign
+                                        Up
+                                    </button>
+                                </div>
+                                <div class="col-md-6" style="text-align: center">
+                                    <button mat-button class="loginBtn" (click)="closeDialogbox()">Close</button>
+                                </div>
+                            </div>
+                            <div class="row" style="width: 100%;margin-top: 5%">
+                                <div class="col-md-12" style="text-align: center">
+                                    <a href="/login" style="text-decoration: none;">I am already a member</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>

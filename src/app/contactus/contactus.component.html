@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <!-- <img src="assets/images/contact-background.jpg" class="backimg"> -->
+  <div class="container col-md-4 col-lg-4 ml auto mr auto">
+    <mat-card>
+      <mat-toolbar>
+        <mat-toolbar-row class="header">
+          <span class="title">Contact Us</span>
+        </mat-toolbar-row>
+        <mat-toolbar-row class="query">
+          <span>If you need any help please contact Us. Write your queries.</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <form class="example-form" [formGroup]="contactForm">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input matInput placeholder="Email.." formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input matInput placeholder="Subject.." formControlName="subject">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <textarea matInput placeholder="Leave a comment..." formControlName="comment"></textarea>
+        </mat-form-field>
+
+        <div class="row" style="width: 100%">
+          <div class="col-md-6"  style="text-align: center">
+            <button mat-button class="btnSty" (click)="submit(contactForm.value)"><i class="fa fa-fw fa-envelope"></i> Send message</button>
+          </div>
+          <div class="col-md-6"  style="text-align: center">
+            <button mat-button class="btnSty" (click)="close()">Close</button>
+          </div>
+        </div>
+      </form>
+
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,215 @@
+<div class="container-fluid">
+  <mat-card class="header">
+    <div class="row">
+      <div class="col-md-2" style="text-align: center;">
+        <a href="/home">
+          <img src="assets/images/CartLogo.png">
+        </a>
+      </div>
+      <div class="col-md-4 search">
+        <form [formGroup]="searchForm">
+          <div class="row">
+            <div class="col-md-10">
+              <input placeholder="Search" formControlName="searchName" style="width: 100%">
+            </div>
+            <div class="col-md-2" style="padding-left: 0%">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <nav class="navbar navbar-expand-lg frstNav">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" (click)="goToLogin()" style="color: white; min-width: 85px; text-decoration: none; cursor: pointer;"><i
+                  class="fa fa-fw fa-user"></i>
+                Login
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="goToSignUp()" style="color: white; min-width: 90px; text-decoration: none; cursor: pointer;"><i
+                  class="fa fa-sign-in"></i>
+                Sign Up
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cart" style="color: white; min-width: 75px; text-decoration: none;"><i class="fa fa-cart-arrow-down"></i>
+                <span [matBadge]="badgeCount" matBadgeOverlap="false">Cart</span> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link dropdown" style="color: white; min-width: 120px; text-decoration: none; cursor: pointer;"><i
+                  class="fa fa-caret-down"></i>
+                More
+                <div class="dropdown-content">
+                  <a (click)="goToContact()" style="cursor: pointer;">Contact Us</a>
+                  <a href="#">About Us</a>
+                  <a (click)="goToCosumerScore()" style="cursor: pointer;">Consumer Score</a>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-toolbar>
+    <div class="col-md-12">
+      <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav" style="width: 100%;">
+          <li class="nav-item col-md-2">
+            <a class="nav-link listItem dropdown">
+              Electronics <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                <mat-list role="list">
+                  <mat-list-item role="listitem" (click)="showMobiles()">Mobiles</mat-list-item>
+                  <mat-list-item role="listitem">Laptops</mat-list-item>
+                  <mat-list-item role="listitem">Cameras</mat-list-item>
+                  <mat-list-item role="listitem">HeadPhones</mat-list-item>
+                </mat-list>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item col-md-2">
+            <a class="nav-link listItem dropdown">
+              Tvs & Appliances <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                <mat-list role="list">
+                  <mat-list-item role="listitem">Android TVs</mat-list-item>
+                  <mat-list-item role="listitem">Washing Machine</mat-list-item>
+                  <mat-list-item role="listitem">Air Conditioners</mat-list-item>
+                  <mat-list-item role="listitem">Kitechen Appliances</mat-list-item>
+                </mat-list>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item col-md-2">
+            <a class="nav-link listItem dropdown">
+              Men & Women <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                <mat-list role="list">
+                  <mat-list-item role="listitem">Clothing</mat-list-item>
+                  <mat-list-item role="listitem">Footwear</mat-list-item>
+                  <mat-list-item role="listitem">Accessories</mat-list-item>
+                </mat-list>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item col-md-2">
+            <a class="nav-link listItem dropdown">
+              Baby & Kids <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                <mat-list role="list">
+                  <mat-list-item role="listitem">Clothing</mat-list-item>
+                  <mat-list-item role="listitem">Footwear</mat-list-item>
+                  <mat-list-item role="listitem">Baby Care</mat-list-item>
+                  <mat-list-item role="listitem">Toys</mat-list-item>
+                </mat-list>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item col-md-2">
+            <a class="nav-link listItem dropdown">
+              Home & Furniture <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                <mat-list role="list">
+                  <mat-list-item role="listitem">Kitchen</mat-list-item>
+                  <mat-list-item role="listitem">Furniture</mat-list-item>
+                  <mat-list-item role="listitem">Home Decor</mat-list-item>
+                  <mat-list-item role="listitem">Home Lighting</mat-list-item>
+                </mat-list>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item col-md-2">
+            <a class="nav-link listItem dropdown">
+              Sports,Books & More <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                <mat-list role="list">
+                  <mat-list-item role="listitem">Sports</mat-list-item>
+                  <mat-list-item role="listitem">Books</mat-list-item>
+                  <mat-list-item role="listitem">Music</mat-list-item>
+                  <mat-list-item role="listitem">Gaming</mat-list-item>
+                </mat-list>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </mat-toolbar>
+
+  <mat-card style="margin-top: 1%; margin-bottom: 1%">
+    <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="[first, second, third, fourth]" style="width: 100%; height:  50%;">
+      <div *nguCarouselDef="let item;" class="item">
+        <div class="tile">
+          <ng-container *ngTemplateOutlet="item"></ng-container>
+        </div>
+      </div>
+      <ng-template #first>
+        <img src="assets/images/image3.jpg" style="width: 190vh; height: 35vh">
+      </ng-template>
+      <ng-template #second>
+        <img src="assets/images/image1.png" style="width: 75vh; height: 35vh">
+      </ng-template>
+      <ng-template #third>
+        <img src="assets/images/image2.png" style="width: 75vh; height: 35vh">
+      </ng-template>
+      <ng-template #fourth>
+        <img src="assets/images/image4.jpg" style="width: 75vh; height: 35vh">
+      </ng-template>
+      <button NguCarouselNext class="rightRs">></button>
+      <button NguCarouselPrev class="leftRs"><</button>
+    </ngu-carousel>
+  </mat-card>
+  <div class="row col-md-12" *ngIf="showMobilesList" style="margin-right: 0px;margin-left: 0px;width: 100%">
+    <div class="col-md-4" *ngFor="let i of mobiles">
+      <mat-card style="background-color: #98a7484a;">
+        <div class="row">
+          <div class="col-md-7">
+            <img class="image" [src]="i.image">
+          </div>
+          <div class="col-md-5" style="margin-top: 10%">
+            <mat-card style="background-color: transparent">
+              <div class="row">
+                <p class="text">{{i.productName}}</p>
+              </div>
+              <div class="row">
+                <p class="text">Rs. {{i.productPrice}} /-</p>
+              </div>
+              <div class="row">
+                <button mat-mini-fab class="text" (click)="addtoCart(i)"><i class="fa fa-cart-arrow-down" style="color: white"></i></button>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row col-md-12" *ngIf="!showMobilesList">
+    <div class="col-md-4">
+      <mat-card style="text-align: center">
+        <img src="assets/images/headphone.jpg" style="width: 80%; height: 15vw;">
+      </mat-card>
+    </div>
+    <div class="col-md-4">
+      <mat-card style="text-align: center"> 
+          <img src="assets/images/kitechen.jpg" style="width: 80%; height: 15vw;">
+      </mat-card>
+    </div>
+    <div class="col-md-4">
+      <mat-card style="text-align: center">
+          <img src="assets/images/shoe.jpg" style="width: 80%; height: 15vw;">
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <img src="assets/images/BlueBackground.jpg" class="backimg">
+  
+  <div class="container col-md-4 col-lg-4 ml auto mr auto">
+    <mat-card>
+       <form class="formSty" [formGroup]="loginForm">
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput type="text" placeholder="Username" formControlName="username">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" formControlName="password">
+          </mat-form-field>
+          <div class="row" style="width: 100%;">
+            <div class="col-md-6" style="text-align: center">
+              <button mat-button class="btnSty" [disabled]="!loginForm.valid" (click)="submitLogin(loginForm.value)">Login</button>
+            </div>
+            <div class="col-md-6" style="text-align: center">
+                <button mat-button class="btnSty" (click)="close()">Close</button>
+            </div>
+          </div>
+          <div class="row row1">
+            <div class="col-md-6">
+              <mat-slide-toggle>Keep Logged in</mat-slide-toggle>
+            </div>
+            <div class="col-md-6" style="text-align: right;">
+              <a href="#" style="text-decoration: none;">Forgot Password?</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <a href="/signUp" style="text-decoration: none;">Create Account</a>
+            </div>
+            <div class="col-md-6" style="text-align: right;">
+              <a href="/contact" style="text-decoration: none;"> Need Help?</a>
+            </div>
+          </div>
+        </div>
+      </form> 
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,118 @@
+.header {
+    background-color: #2f2fa2;
+    color: white;
+
+}
+
+.search {
+    margin: auto;
+}
+
+.frstNav {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 35%;
+}
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 125px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+
+.item {
+    padding: 10px;
+    box-sizing: border-box;
+}
+  
+.tile {
+    min-height: 200px;
+    background-color: #ccc;
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+  
+.leftRs {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+    border-radius: 999px;
+    left: 0;
+}
+   
+.rightRs {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+    border-radius: 999px;
+    right: 0;
+}
+
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: 35px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.listItem {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+mat-list-item {
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    height: 15vw;
+    // object-fit: cover;
+}
+
+.text {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    font-family: serif;
+}
+
+::ng-deep .mat-mini-fab.mat-accent {
+    background-color: #2f2fa2;
+
+}
+
+.mat-badge {
+    position: absolute;
+}
